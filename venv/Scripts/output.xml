@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.7.3 on win32)" generated="20210808 14:32:07.730" rpa="false" schemaversion="2">
+<suite id="s1" name="用例层" source="E:\PycharmProject\test2\WnTest\用例层">
+<suite id="s1-s1" name="测试接口" source="E:\PycharmProject\test2\WnTest\用例层\测试接口">
+<suite id="s1-s1-s1" name="findPharmacyDept用例" source="E:\PycharmProject\test2\WnTest\用例层\测试接口\findPharmacyDept用例.robot">
+<kw name="{初始化host地址}" library="初始化操作" type="SETUP">
+<kw name="获取host地址" library="配置文件读取">
+<var>${value}</var>
+<kw name="获取配置文件" library="配置文件读取">
+<var>${value}</var>
+<arg>server</arg>
+<arg>host</arg>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${CONF_DATA}"==""</arg>
+<arg>所有配置文件值</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="所有配置文件值" library="配置文件读取">
+<kw name="获取配置文件路径" library="配置文件读取">
+<var>${config_path}</var>
+<kw name="Wnconfigini Config Path" library="WnLibraryV3">
+<var>${config_path}</var>
+<msg timestamp="20210808 14:32:08.091" level="INFO">2021-08-08 14:32:08#####wnconfigini_config_path获取文件路径成功：E:\PycharmProject\\test2\WnTest\1操作层\config.ini</msg>
+<msg timestamp="20210808 14:32:08.099" level="INFO">${config_path} = E:\PycharmProject\\test2\WnTest\1操作层\config.ini</msg>
+<status status="PASS" starttime="20210808 14:32:08.091" endtime="20210808 14:32:08.099"/>
+</kw>
+<msg timestamp="20210808 14:32:08.099" level="INFO">${config_path} = E:\PycharmProject\\test2\WnTest\1操作层\config.ini</msg>
+<status status="PASS" starttime="20210808 14:32:08.091" endtime="20210808 14:32:08.099"/>
+</kw>
+<kw name="Wnconfigini Get All" library="WnLibraryV3">
+<var>${value_dict}</var>
+<arg>${config_path}</arg>
+<msg timestamp="20210808 14:32:08.099" level="INFO">${value_dict} = {'server': {'host': 'https://yyf2-test.pharmakeyring.com', 'default_user': 'admin', 'default_pswd': 'Admin001.'}, 'database': {'db_ip': '121.196.188.162', 'db_port': '3306', 'db_username': 'ysqwrite',...</msg>
+<status status="PASS" starttime="20210808 14:32:08.099" endtime="20210808 14:32:08.099"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${CONF_DATA}</arg>
+<arg>${value_dict}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20210808 14:32:08.099" level="INFO">${CONF_DATA} = {'server': {'host': 'https://yyf2-test.pharmakeyring.com', 'default_user': 'admin', 'default_pswd': 'Admin001.'}, 'database': {'db_ip': '121.196.188.162', 'db_port': '3306', 'db_username': 'ysqwrite',...</msg>
+<status status="PASS" starttime="20210808 14:32:08.099" endtime="20210808 14:32:08.099"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${CONF_DATA}"!=None</arg>
+<arg>log</arg>
+<arg>配置文件读取.所有配置文件值获取成功：${CONF_DATA}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>配置文件读取.所有配置文件值获取成功：${CONF_DATA}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210808 14:32:08.099" level="INFO">配置文件读取.所有配置文件值获取成功：{'server': {'host': 'https://yyf2-test.pharmakeyring.com', 'default_user': 'admin', 'default_pswd': 'Admin001.'}, 'database': {'db_ip': '121.196.188.162', 'db_port': '3306', 'db_username': 'ysqwrite', 'db_password': 'LIttd$5J9VAq'}, 'redis': {'rds_ip': '121.196.188.162', 'rds_port': '6379', 'rds_password': 'b$vmI8mA'}}</msg>
+<status status="PASS" starttime="20210808 14:32:08.099" endtime="20210808 14:32:08.099"/>
+</kw>
+<status status="PASS" starttime="20210808 14:32:08.099" endtime="20210808 14:32:08.099"/>
+</kw>
+<status status="PASS" starttime="20210808 14:32:08.091" endtime="20210808 14:32:08.099"/>
+</kw>
+<status status="PASS" starttime="20210808 14:32:08.091" endtime="20210808 14:32:08.099"/>
+</kw>
+<msg timestamp="20210808 14:32:08.099" level="INFO">${value} = https://yyf2-test.pharmakeyring.com</msg>
+<status status="PASS" starttime="20210808 14:32:08.091" endtime="20210808 14:32:08.099"/>
+</kw>
+<msg timestamp="20210808 14:32:08.099" level="INFO">${value} = https://yyf2-test.pharmakeyring.com</msg>
+<status status="PASS" starttime="20210808 14:32:08.091" endtime="20210808 14:32:08.099"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${HOST}</arg>
+<arg>${value}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20210808 14:32:08.099" level="INFO">${HOST} = https://yyf2-test.pharmakeyring.com</msg>
+<status status="PASS" starttime="20210808 14:32:08.099" endtime="20210808 14:32:08.099"/>
+</kw>
+<status status="PASS" starttime="20210808 14:32:08.091" endtime="20210808 14:32:08.099"/>
+</kw>
+<test id="s1-s1-s1-t1" name="用户登录">
+<kw name="{默认用户登录初始化}" library="初始化操作">
+<kw name="默认用户登录token" library="初始化_底层">
+<var>${token}</var>
+<kw name="获取default_user" library="配置文件读取">
+<var>${username}</var>
+<kw name="获取配置文件" library="配置文件读取">
+<var>${value}</var>
+<arg>server</arg>
+<arg>default_user</arg>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${CONF_DATA}"==""</arg>
+<arg>所有配置文件值</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20210808 14:32:08.107" endtime="20210808 14:32:08.107"/>
+</kw>
+<msg timestamp="20210808 14:32:08.107" level="INFO">${value} = admin</msg>
+<status status="PASS" starttime="20210808 14:32:08.107" endtime="20210808 14:32:08.107"/>
+</kw>
+<msg timestamp="20210808 14:32:08.107" level="INFO">${username} = admin</msg>
+<status status="PASS" starttime="20210808 14:32:08.107" endtime="20210808 14:32:08.107"/>
+</kw>
+<kw name="获取default_pswd" library="配置文件读取">
+<var>${password}</var>
+<kw name="获取配置文件" library="配置文件读取">
+<var>${value}</var>
+<arg>server</arg>
+<arg>default_pswd</arg>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${CONF_DATA}"==""</arg>
+<arg>所有配置文件值</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20210808 14:32:08.107" endtime="20210808 14:32:08.107"/>
+</kw>
+<msg timestamp="20210808 14:32:08.107" level="INFO">${value} = Admin001.</msg>
+<status status="PASS" starttime="20210808 14:32:08.107" endtime="20210808 14:32:08.107"/>
+</kw>
+<msg timestamp="20210808 14:32:08.107" level="INFO">${password} = Admin001.</msg>
+<status status="PASS" starttime="20210808 14:32:08.107" endtime="20210808 14:32:08.107"/>
+</kw>
+<kw name="用户登录token" library="初始化_底层">
+<var>${token}</var>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="Wnrsa Pswd Encrypt" library="WnLibraryV3">
+<var>${pswd_enyt}</var>
+<arg>${password}</arg>
+<msg timestamp="20210808 14:32:08.115" level="INFO">${pswd_enyt} = B900YPl7hAK1VB3AUfSrXoDh6wbNZtj7jLRkT5//j8Z1rXNAwyZ9voRYOmt1nmScjRTQOfUIOv6PVqrHsoUkGFcRDA0wlBOcsq5or7aqswrKnMjoDfFHKtdno37U2MyzhTUR7BbrAPkG2m9uAMgVkMUnYLv9acXfz9oA96GAQqE=</msg>
+<status status="PASS" starttime="20210808 14:32:08.107" endtime="20210808 14:32:08.115"/>
+</kw>
+<kw name="captcha" library="初始化_底层">
+<var>${data}</var>
+<kw name="获取rds_ip" library="配置文件读取">
+<var>${rds_ip}</var>
+<kw name="获取配置文件" library="配置文件读取">
+<var>${value}</var>
+<arg>redis</arg>
+<arg>rds_ip</arg>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${CONF_DATA}"==""</arg>
+<arg>所有配置文件值</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20210808 14:32:08.115" endtime="20210808 14:32:08.115"/>
+</kw>
+<msg timestamp="20210808 14:32:08.115" level="INFO">${value} = 121.196.188.162</msg>
+<status status="PASS" starttime="20210808 14:32:08.115" endtime="20210808 14:32:08.115"/>
+</kw>
+<msg timestamp="20210808 14:32:08.115" level="INFO">${rds_ip} = 121.196.188.162</msg>
+<status status="PASS" starttime="20210808 14:32:08.115" endtime="20210808 14:32:08.115"/>
+</kw>
+<kw name="获取rds_port" library="配置文件读取">
+<var>${rds_port}</var>
+<kw name="获取配置文件" library="配置文件读取">
+<var>${value}</var>
+<arg>redis</arg>
+<arg>rds_port</arg>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${CONF_DATA}"==""</arg>
+<arg>所有配置文件值</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20210808 14:32:08.115" endtime="20210808 14:32:08.115"/>
+</kw>
+<msg timestamp="20210808 14:32:08.115" level="INFO">${value} = 6379</msg>
+<status status="PASS" starttime="20210808 14:32:08.115" endtime="20210808 14:32:08.115"/>
+</kw>
+<msg timestamp="20210808 14:32:08.115" level="INFO">${rds_port} = 6379</msg>
+<status status="PASS" starttime="20210808 14:32:08.115" endtime="20210808 14:32:08.115"/>
+</kw>
+<kw name="获取rds_password" library="配置文件读取">
+<var>${rds_password}</var>
+<kw name="获取配置文件" library="配置文件读取">
+<var>${value}</var>
+<arg>redis</arg>
+<arg>rds_password</arg>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${CONF_DATA}"==""</arg>
+<arg>所有配置文件值</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20210808 14:32:08.115" endtime="20210808 14:32:08.115"/>
+</kw>
+<msg timestamp="20210808 14:32:08.115" level="INFO">${value} = b$vmI8mA</msg>
+<status status="PASS" starttime="20210808 14:32:08.115" endtime="20210808 14:32:08.115"/>
+</kw>
+<msg timestamp="20210808 14:32:08.115" level="INFO">${rds_password} = b$vmI8mA</msg>
+<status status="PASS" starttime="20210808 14:32:08.115" endtime="20210808 14:32:08.115"/>
+</kw>
+<kw name="Disable Warnings" library="urllib3">
+<doc>Helper for quickly disabling all urllib3 warnings.</doc>
+<status status="PASS" starttime="20210808 14:32:08.115" endtime="20210808 14:32:08.115"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>api</arg>
+<arg>${HOST}</arg>
+<arg>${DEFAULT_HEADER}</arg>
+<arg>verify=${False}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20210808 14:32:08.115" level="INFO">Creating Session using : alias=api, url=https://yyf2-test.pharmakeyring.com, headers={'Content-Type': 'application/json;charset:utf-8'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210808 14:32:08.115" endtime="20210808 14:32:08.115"/>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<var>${Return}</var>
+<arg>api</arg>
+<arg>/sso/sso/captcha</arg>
+<arg>data={}</arg>
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<msg timestamp="20210808 14:32:08.115" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20210808 14:32:08.264" level="INFO">POST Request : url=https://yyf2-test.pharmakeyring.com/sso/sso/captcha 
+ path_url=/sso/sso/captcha 
+ headers={'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset:utf-8', 'Content-Length': '2'} 
+ body=b'{}' 
+ </msg>
+<msg timestamp="20210808 14:32:08.264" level="INFO">POST Response : url=https://yyf2-test.pharmakeyring.com/sso/sso/captcha 
+ status=200, reason= 
+ headers={'Date': 'Sun, 08 Aug 2021 06:32:08 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': 'acw_tc=781bad3016284043280774845e2cecf20c0de729f6aa0d22b1cdd633f09fc4;path=/;HttpOnly;Max-Age=1800'} 
+ body={"code":1,"msg":"操作成功","data":{"image":"data:image/png;base64,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","key":"5e3ca8ab-bf5c-4322-b019-3e752b5b7e0c"}} 
+ </msg>
+<msg timestamp="20210808 14:32:08.264" level="INFO">${Return} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210808 14:32:08.115" endtime="20210808 14:32:08.264"/>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>200</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" starttime="20210808 14:32:08.264" endtime="20210808 14:32:08.264"/>
+</kw>
+<kw name="Wnredis Get" library="WnLibraryV3">
+<var>${vercode}</var>
+<arg>${rds_ip}</arg>
+<arg>${rds_port}</arg>
+<arg>${rds_password}</arg>
+<arg>${Return.json()['data']['key']}</arg>
+<msg timestamp="20210808 14:32:29.314" level="ERROR">2021-08-08 14:32:29#####wnredis_get 121.196.188.162:6379 密码：b$vmI8mA连接失败</msg>
+<msg timestamp="20210808 14:32:29.318" level="INFO">${vercode} = None</msg>
+<status status="PASS" starttime="20210808 14:32:08.264" endtime="20210808 14:32:29.318"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{data}</var>
+<arg>verCode=${vercode}</arg>
+<arg>verKey=${Return.json()['data']['key']}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210808 14:32:29.318" level="INFO">&amp;{data} = { verCode=None | verKey=5e3ca8ab-bf5c-4322-b019-3e752b5b7e0c }</msg>
+<status status="PASS" starttime="20210808 14:32:29.318" endtime="20210808 14:32:29.318"/>
+</kw>
+<msg timestamp="20210808 14:32:29.318" level="INFO">${data} = {'verCode': None, 'verKey': '5e3ca8ab-bf5c-4322-b019-3e752b5b7e0c'}</msg>
+<status status="PASS" starttime="20210808 14:32:08.115" endtime="20210808 14:32:29.318"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${data}</arg>
+<arg>password=${pswd_enyt}</arg>
+<arg>username=${username}</arg>
+<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20210808 14:32:29.318" endtime="20210808 14:32:29.318"/>
+</kw>
+<kw name="Disable Warnings" library="urllib3">
+<doc>Helper for quickly disabling all urllib3 warnings.</doc>
+<status status="PASS" starttime="20210808 14:32:29.318" endtime="20210808 14:32:29.318"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>api</arg>
+<arg>${HOST}</arg>
+<arg>${DEFAULT_HEADER}</arg>
+<arg>verify=${False}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20210808 14:32:29.318" level="INFO">Creating Session using : alias=api, url=https://yyf2-test.pharmakeyring.com, headers={'Content-Type': 'application/json;charset:utf-8'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210808 14:32:29.318" endtime="20210808 14:32:29.318"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>用户登录token：${DEFAULT_HEADER}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210808 14:32:29.318" endtime="20210808 14:32:29.318"/>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<var>${Return}</var>
+<arg>api</arg>
+<arg>/sso/sso/login</arg>
+<arg>data=${data}</arg>
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<msg timestamp="20210808 14:32:29.318" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20210808 14:32:29.485" level="INFO">POST Request : url=https://yyf2-test.pharmakeyring.com/sso/sso/login 
+ path_url=/sso/sso/login 
+ headers={'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset:utf-8', 'Content-Length': '276'} 
+ body={"verCode": null, "verKey": "5e3ca8ab-bf5c-4322-b019-3e752b5b7e0c", "password": "B900YPl7hAK1VB3AUfSrXoDh6wbNZtj7jLRkT5//j8Z1rXNAwyZ9voRYOmt1nmScjRTQOfUIOv6PVqrHsoUkGFcRDA0wlBOcsq5or7aqswrKnMjoDfFHKtdno37U2MyzhTUR7BbrAPkG2m9uAMgVkMUnYLv9acXfz9oA96GAQqE=", "username": "admin"} 
+ </msg>
+<msg timestamp="20210808 14:32:29.485" level="INFO">POST Response : url=https://yyf2-test.pharmakeyring.com/sso/sso/login 
+ status=200, reason= 
+ headers={'Date': 'Sun, 08 Aug 2021 06:32:29 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': 'acw_tc=781bad2916284043493051158e0408231e2f88d27a04b3c0caee14493da4e0;path=/;HttpOnly;Max-Age=1800'} 
+ body={"code":0,"msg":"登陆失败，验证码不正确","data":null} 
+ </msg>
+<msg timestamp="20210808 14:32:29.485" level="INFO">${Return} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210808 14:32:29.318" endtime="20210808 14:32:29.485"/>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>200</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" starttime="20210808 14:32:29.485" endtime="20210808 14:32:29.485"/>
+</kw>
+<msg timestamp="20210808 14:32:29.493" level="FAIL">Replacing variables from keyword return value failed: Resolving variable '${Return.json()['data']['token']}' failed: TypeError: 'NoneType' object is not subscriptable</msg>
+<status status="FAIL" starttime="20210808 14:32:08.107" endtime="20210808 14:32:29.493"/>
+</kw>
+<status status="FAIL" starttime="20210808 14:32:08.107" endtime="20210808 14:32:29.493"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${cookie}</arg>
+<arg>${token}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="NOT RUN" starttime="20210808 14:32:29.493" endtime="20210808 14:32:29.493"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${default_header}</arg>
+<arg>{'Content-Type':'application/json;charset:utf-8','cookie':'token=${cookie}'}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="NOT RUN" starttime="20210808 14:32:29.493" endtime="20210808 14:32:29.493"/>
+</kw>
+<status status="FAIL" starttime="20210808 14:32:08.107" endtime="20210808 14:32:29.493"/>
+</kw>
+<status status="FAIL" starttime="20210808 14:32:08.107" endtime="20210808 14:32:29.493">Replacing variables from keyword return value failed: Resolving variable '${Return.json()['data']['token']}' failed: TypeError: 'NoneType' object is not subscriptable</status>
+</test>
+<test id="s1-s1-s1-t2" name="findPharmacyDept_正确入参">
+<kw name="findPharmacyDept" library="findPharmacyDept接口">
+<var>${Return}</var>
+<arg>${data_001}</arg>
+<tag>ceeelelle</tag>
+<kw name="Disable Warnings" library="urllib3">
+<doc>Helper for quickly disabling all urllib3 warnings.</doc>
+<status status="PASS" starttime="20210808 14:32:29.501" endtime="20210808 14:32:29.501"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>api</arg>
+<arg>${HOST}</arg>
+<arg>${headers}</arg>
+<arg>verify=${False}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20210808 14:32:29.501" level="INFO">Creating Session using : alias=api, url=https://yyf2-test.pharmakeyring.com, headers={'Content-Type': 'application/json;charset:utf-8'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210808 14:32:29.501" endtime="20210808 14:32:29.501"/>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<var>${Return}</var>
+<arg>api</arg>
+<arg>/organization-middleground/pharmacyDept/findPharmacyDept/page</arg>
+<arg>data=${data}</arg>
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<msg timestamp="20210808 14:32:29.501" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20210808 14:32:29.652" level="INFO">POST Request : url=https://yyf2-test.pharmakeyring.com/organization-middleground/pharmacyDept/findPharmacyDept/page 
+ path_url=/organization-middleground/pharmacyDept/findPharmacyDept/page 
+ headers={'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset:utf-8', 'Content-Length': '123'} 
+ body=b'{"pageNo":1,"pageSize":10,"deptType":"","deptName":"","deptPinyin":"","isEnable":"","optUserId":1,"optUserName":"ysqadmin"}' 
+ </msg>
+<msg timestamp="20210808 14:32:29.652" level="INFO">POST Response : url=https://yyf2-test.pharmakeyring.com/organization-middleground/pharmacyDept/findPharmacyDept/page 
+ status=200, reason= 
+ headers={'Date': 'Sun, 08 Aug 2021 06:32:29 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': 'acw_tc=2f624a1116284043494613514e3a47466481936295b43e99b202267eba7b3c;path=/;HttpOnly;Max-Age=1800'} 
+ body={"code":1,"msg":"操作成功","data":{"records":[{"deptId":1,"deptTypeId":1,"deptType":"儿科","deptName":"烧伤科1","deptPinyin":"ssk","deptCode":"0011","parentId":0,"isEnable":0,"createDate":"2020-07-15 17:39:05","createUser":"1","modifyDate":"2021-07-06 18:17:53","modifyUser":"1","isDel":0},{"deptId":2,"deptTypeId":3,"deptType":"放射科","deptName":"烧伤科","deptPinyin":"ssk","deptCode":"002","parentId":0,"isEnable":1,"createDate":"2020-07-15 17:39:05","createUser":"1","modifyDate":"2021-04-20 13:18:00","modifyUser":"1","isDel":0},{"deptId":3,"deptTypeId":3,"deptType":"放射科","deptName":"烧伤科","deptPinyin":"ssk","deptCode":"002","parentId":0,"isEnable":1,"createDate":"2020-07-15 17:39:05","createUser":"1","modifyDate":"2020-07-23 18:54:01","modifyUser":"14","isDel":0},{"deptId":121,"deptTypeId":3,"deptType":"放射科","deptName":"烧伤科01","deptPinyin":"ssk01","deptCode":"002","parentId":0,"isEnable":1,"createDate":"2020-07-15 17:39:05","createUser":"1","modifyDate":"2020-07-29 13:00:13","modifyUser":"1","isDel":0},{"deptId":122,"deptTypeId":1,"deptType":"儿科","deptName":"12321321","deptPinyin":"12321321","deptCode":"21321","parentId":0,"isEnable":1,"createDate":"2020-07-20 20:27:35","createUser":"2","isDel":0},{"deptId":123,"deptTypeId":3,"deptType":"放射科","deptName":"测试1","deptPinyin":"cs1","deptCode":"测试22","parentId":0,"isEnable":1,"createDate":"2020-07-20 20:34:15","createUser":"2","modifyDate":"2020-07-20 20:58:28","modifyUser":"2","isDel":0},{"deptId":124,"deptTypeId":4,"deptType":"内科","deptName":"正则科室","deptPinyin":"zzks","deptCode":"232321","parentId":0,"isEnable":1,"createDate":"2020-07-21 09:27:47","createUser":"1","modifyDate":"2021-04-07 15:31:42","modifyUser":"1","isDel":0},{"deptId":135,"deptTypeId":4,"deptType":"内科","deptName":"心肺科","deptPinyin":"xfk","deptCode":"100001111","parentId":0,"isEnable":0,"createDate":"2020-07-24 10:35:13","createUser":"14","modifyDate":"2021-04-07 15:31:43","modifyUser":"1","isDel":0},{"deptId":136,"deptTypeId":3,"deptType":"放射科","deptName":"测试科室","deptPinyin":"csks","deptCode":"3414155","parentId":0,"isEnable":1,"createDate":"2020-07-31 10:25:30","createUser":"1","modifyDate":"2020-08-11 10:35:57","modifyUser":"1","isDel":0},{"deptId":137,"deptTypeId":3,"deptType":"放射科","deptName":"21114a","deptPinyin":"21114a","deptCode":"222313","parentId":0,"isEnable":0,"createDate":"2020-07-31 10:34:30","createUser":"1","modifyDate":"2021-04-07 15:31:44","modifyUser":"1","isDel":0}],"total":762,"size":10,"current":1,"searchCount":true,"pages":77}} 
+ </msg>
+<msg timestamp="20210808 14:32:29.652" level="INFO">${Return} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210808 14:32:29.501" endtime="20210808 14:32:29.652"/>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>200</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" starttime="20210808 14:32:29.652" endtime="20210808 14:32:29.652"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Return.json()}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210808 14:32:29.652" endtime="20210808 14:32:29.652"/>
+</kw>
+<msg timestamp="20210808 14:32:29.660" level="INFO">${Return} = {'code': 1, 'msg': '操作成功', 'data': {'records': [{'deptId': 1, 'deptTypeId': 1, 'deptType': '儿科', 'deptName': '烧伤科1', 'deptPinyin': 'ssk', 'deptCode': '0011', 'parentId': 0, 'isEnable': 0, 'createDate'...</msg>
+<timeout value="1 minute"/>
+<status status="PASS" starttime="20210808 14:32:29.493" endtime="20210808 14:32:29.660"/>
+</kw>
+<kw name="数据库查询_行数" library="数据库操作">
+<var>${data}</var>
+<arg>pharmacy_org</arg>
+<arg>SELECT * FROM `pharmacy_dept`</arg>
+<kw name="获取数据库ip" library="配置文件读取">
+<var>${db_ip}</var>
+<kw name="获取配置文件" library="配置文件读取">
+<var>${value}</var>
+<arg>database</arg>
+<arg>db_ip</arg>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${CONF_DATA}"==""</arg>
+<arg>所有配置文件值</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20210808 14:32:29.668" endtime="20210808 14:32:29.668"/>
+</kw>
+<msg timestamp="20210808 14:32:29.668" level="INFO">${value} = 121.196.188.162</msg>
+<status status="PASS" starttime="20210808 14:32:29.668" endtime="20210808 14:32:29.668"/>
+</kw>
+<msg timestamp="20210808 14:32:29.668" level="INFO">${db_ip} = 121.196.188.162</msg>
+<status status="PASS" starttime="20210808 14:32:29.668" endtime="20210808 14:32:29.668"/>
+</kw>
+<kw name="获取数据库port" library="配置文件读取">
+<var>${db_port}</var>
+<kw name="获取配置文件" library="配置文件读取">
+<var>${value}</var>
+<arg>database</arg>
+<arg>db_port</arg>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${CONF_DATA}"==""</arg>
+<arg>所有配置文件值</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20210808 14:32:29.668" endtime="20210808 14:32:29.668"/>
+</kw>
+<msg timestamp="20210808 14:32:29.668" level="INFO">${value} = 3306</msg>
+<status status="PASS" starttime="20210808 14:32:29.668" endtime="20210808 14:32:29.668"/>
+</kw>
+<msg timestamp="20210808 14:32:29.668" level="INFO">${db_port} = 3306</msg>
+<status status="PASS" starttime="20210808 14:32:29.668" endtime="20210808 14:32:29.668"/>
+</kw>
+<kw name="获取数据库username" library="配置文件读取">
+<var>${db_username}</var>
+<kw name="获取配置文件" library="配置文件读取">
+<var>${value}</var>
+<arg>database</arg>
+<arg>db_username</arg>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${CONF_DATA}"==""</arg>
+<arg>所有配置文件值</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20210808 14:32:29.668" endtime="20210808 14:32:29.668"/>
+</kw>
+<msg timestamp="20210808 14:32:29.668" level="INFO">${value} = ysqwrite</msg>
+<status status="PASS" starttime="20210808 14:32:29.668" endtime="20210808 14:32:29.668"/>
+</kw>
+<msg timestamp="20210808 14:32:29.668" level="INFO">${db_username} = ysqwrite</msg>
+<status status="PASS" starttime="20210808 14:32:29.668" endtime="20210808 14:32:29.668"/>
+</kw>
+<kw name="获取数据库password" library="配置文件读取">
+<var>${db_password}</var>
+<kw name="获取配置文件" library="配置文件读取">
+<var>${value}</var>
+<arg>database</arg>
+<arg>db_password</arg>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>"${CONF_DATA}"==""</arg>
+<arg>所有配置文件值</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20210808 14:32:29.668" endtime="20210808 14:32:29.668"/>
+</kw>
+<msg timestamp="20210808 14:32:29.668" level="INFO">${value} = LIttd$5J9VAq</msg>
+<status status="PASS" starttime="20210808 14:32:29.668" endtime="20210808 14:32:29.668"/>
+</kw>
+<msg timestamp="20210808 14:32:29.668" level="INFO">${db_password} = LIttd$5J9VAq</msg>
+<status status="PASS" starttime="20210808 14:32:29.668" endtime="20210808 14:32:29.668"/>
+</kw>
+<kw name="wnmysql_get_len">
+<var>${return}</var>
+<arg>${db_ip}</arg>
+<arg>${db_port}</arg>
+<arg>${db_username}</arg>
+<arg>${db_password}</arg>
+<arg>${db_name}</arg>
+<arg>${sql}</arg>
+<msg timestamp="20210808 14:32:29.668" level="FAIL">No keyword with name 'wnmysql_get_len' found. Did you mean:
+    WnLibraryV3.Wnmysql Get</msg>
+<status status="FAIL" starttime="20210808 14:32:29.668" endtime="20210808 14:32:29.676"/>
+</kw>
+<status status="FAIL" starttime="20210808 14:32:29.668" endtime="20210808 14:32:29.676"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${Return['code']}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20210808 14:32:29.676" endtime="20210808 14:32:29.676"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${Return['msg']}</arg>
+<arg>操作成功</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20210808 14:32:29.676" endtime="20210808 14:32:29.676"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${Return['data']['total']}</arg>
+<arg>${data}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20210808 14:32:29.676" endtime="20210808 14:32:29.676"/>
+</kw>
+<status status="FAIL" starttime="20210808 14:32:29.493" endtime="20210808 14:32:29.676">No keyword with name 'wnmysql_get_len' found. Did you mean:
+    WnLibraryV3.Wnmysql Get</status>
+</test>
+<test id="s1-s1-s1-t3" name="findPharmacyDept_data未传">
+<kw name="findPharmacyDept" library="findPharmacyDept接口">
+<var>${Return}</var>
+<arg>${data_002}</arg>
+<tag>ceeelelle</tag>
+<kw name="Disable Warnings" library="urllib3">
+<doc>Helper for quickly disabling all urllib3 warnings.</doc>
+<status status="PASS" starttime="20210808 14:32:29.684" endtime="20210808 14:32:29.684"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>api</arg>
+<arg>${HOST}</arg>
+<arg>${headers}</arg>
+<arg>verify=${False}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20210808 14:32:29.684" level="INFO">Creating Session using : alias=api, url=https://yyf2-test.pharmakeyring.com, headers={'Content-Type': 'application/json;charset:utf-8'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210808 14:32:29.684" endtime="20210808 14:32:29.685"/>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<var>${Return}</var>
+<arg>api</arg>
+<arg>/organization-middleground/pharmacyDept/findPharmacyDept/page</arg>
+<arg>data=${data}</arg>
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<msg timestamp="20210808 14:32:29.685" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20210808 14:32:29.802" level="INFO">POST Request : url=https://yyf2-test.pharmakeyring.com/organization-middleground/pharmacyDept/findPharmacyDept/page 
+ path_url=/organization-middleground/pharmacyDept/findPharmacyDept/page 
+ headers={'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset:utf-8', 'Content-Length': '2'} 
+ body=b'{}' 
+ </msg>
+<msg timestamp="20210808 14:32:29.802" level="INFO">POST Response : url=https://yyf2-test.pharmakeyring.com/organization-middleground/pharmacyDept/findPharmacyDept/page 
+ status=200, reason= 
+ headers={'Date': 'Sun, 08 Aug 2021 06:32:29 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': 'acw_tc=2f61f26216284043496354732e357223ea6e90f4035961dc9f0e645bb2cd42;path=/;HttpOnly;Max-Age=1800'} 
+ body={"code":0,"msg":"页码不能为空","data":null} 
+ </msg>
+<msg timestamp="20210808 14:32:29.802" level="INFO">${Return} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210808 14:32:29.685" endtime="20210808 14:32:29.802"/>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>200</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" starttime="20210808 14:32:29.802" endtime="20210808 14:32:29.810"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Return.json()}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210808 14:32:29.810" endtime="20210808 14:32:29.810"/>
+</kw>
+<msg timestamp="20210808 14:32:29.810" level="INFO">${Return} = {'code': 0, 'msg': '页码不能为空', 'data': None}</msg>
+<timeout value="1 minute"/>
+<status status="PASS" starttime="20210808 14:32:29.683" endtime="20210808 14:32:29.810"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${Return['code']}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20210808 14:32:29.810" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20210808 14:32:29.810" endtime="20210808 14:32:29.810"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${Return['msg']}</arg>
+<arg>页码不能为空</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20210808 14:32:29.810" endtime="20210808 14:32:29.818"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${Return['data']}</arg>
+<arg>${None}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20210808 14:32:29.818" endtime="20210808 14:32:29.818"/>
+</kw>
+<status status="PASS" starttime="20210808 14:32:29.682" endtime="20210808 14:32:29.818"/>
+</test>
+<status status="FAIL" starttime="20210808 14:32:07.746" endtime="20210808 14:32:29.818"/>
+</suite>
+<status status="FAIL" starttime="20210808 14:32:07.746" endtime="20210808 14:32:29.835"/>
+</suite>
+<status status="FAIL" starttime="20210808 14:32:07.730" endtime="20210808 14:32:29.843"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="2" skip="0" id="s1" name="用例层">用例层</stat>
+<stat pass="1" fail="2" skip="0" id="s1-s1" name="测试接口">用例层.测试接口</stat>
+<stat pass="1" fail="2" skip="0" id="s1-s1-s1" name="findPharmacyDept用例">用例层.测试接口.findPharmacyDept用例</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210808 14:32:08.115" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20210808 14:32:29.314" level="ERROR">2021-08-08 14:32:29#####wnredis_get 121.196.188.162:6379 密码：b$vmI8mA连接失败</msg>
+<msg timestamp="20210808 14:32:29.318" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20210808 14:32:29.501" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20210808 14:32:29.685" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+</errors>
+</robot>

@@ -1,0 +1,7 @@
+2021-08-08 13:49:14#####wnconfigini_config_path获取文件路径成功：E:\PycharmProject\test2\venv\Scripts\rf_log.log1操作层\config.ini
+2021-08-08 14:23:27#####wnconfigini_config_path获取文件路径成功：E:\PycharmProject\test2\venv\Scripts\rf_log.log1操作层\config.ini
+2021-08-08 14:25:38#####wnconfigini_config_path获取文件路径成功：E:\PycharmProject\test2\WnTest\1操作层\config.ini
+[ERROR]2021-08-08 14:26:00#####wnredis_get 121.196.188.162:6379 密码：b$vmI8mA连接失败
+2021-08-08 14:27:51#####wnconfigini_config_path获取文件路径成功：E:\PycharmProject\test2\venv\Scripts\rf_log.log1操作层\config.ini
+2021-08-08 14:32:08#####wnconfigini_config_path获取文件路径成功：E:\PycharmProject\\test2\WnTest\1操作层\config.ini
+[ERROR]2021-08-08 14:32:29#####wnredis_get 121.196.188.162:6379 密码：b$vmI8mA连接失败
